@@ -4,6 +4,7 @@
     --text-color: #111111;
     --background-color: #ffffff;
     --secend-background-color: #F1F1F1;
+    --custom-gray: #BEBEBE;
 }
 
 * {
@@ -262,6 +263,93 @@ section {
         }
     }
 
+    .photo{
+        display: flex;
+        flex-direction: column;
+
+        .photo-product{
+            padding-left: 0.938rem;
+            padding-right: 0.938rem;
+        }
+
+    }
+
+
+}
+
+.section-products {
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+    background-color: var(--secend-background-color);
+
+    .products-list {
+        display: flex;
+        justify-content: center;
+        gap: 3.125rem;
+        flex-wrap: wrap;
+        margin-top: 1.875rem;
+
+        .product {
+            background-color: var(--custom-gray);
+            height: 6.563rem;
+            width: 6.563rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 450;
+            font-size: 1.938rem;
+        }
+    }
+}
+
+.custom-select {
+    display: flex;
+    flex-direction: column;
+    width: 16.25rem;
+    border: 1px solid var(--accent-color);
+
+    .select-label {
+        font-size: 1.25rem;
+        font-weight: 450;
+        padding: 0.625rem;
+        text-align: center;
+    }
+
+    .select-wrapper {
+        position: relative;
+
+        .custom-arrow {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+    }
+
+    select {
+        width: 100%;
+        padding-top: 0.625rem;
+        padding-bottom: 0.625rem;
+        border: none;
+        background-color: var(--accent-color);
+        color: var(--background-color);
+        font-weight: 700;
+        text-align: center;
+        cursor: pointer;
+        font-size: 1.25rem;
+        
+        border-radius: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+
+    }
+
+    select:focus {
+        outline: 2px solid #AD4844;
+    }
 
 }
 
