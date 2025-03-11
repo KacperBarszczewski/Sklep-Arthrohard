@@ -3,6 +3,7 @@
     --logo-color: #333;
     --text-color: #111111;
     --background-color: #F1F1F1;
+    --secend-background-color: #EBEBEBB1;
 }
 
 * {
@@ -26,6 +27,10 @@ h3 {
 p {
     font-weight: 400;
     font-size: 0.813rem;
+}
+
+strong {
+    font-weight: 450;
 }
 
 header {
@@ -87,12 +92,37 @@ section {
     }
 }
 
+.h-gradient {
+    background: radial-gradient(circle, #B1B1B1 0%, var(--text-color) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
 .container-gap20 {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
     padding-left: 0.938rem;
     padding-right: 0.938rem;
+}
+
+.layout-container {
+    width: 100%;
+    position: relative;
+
+    .layout-container-img1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .layout-container-img2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }
 
 .steps-list {
@@ -117,10 +147,13 @@ section {
         font-weight: bold;
         box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
         flex-shrink: 0;
+        font-size: 1.25rem;
+        font-weight: 700;
     }
 
     .step-text {
         font-size: 0.813rem;
+        text-align: start;
     }
 }
 
@@ -166,33 +199,9 @@ section {
         border-bottom: 1px solid;
     }
 
-    .section2-h2-gl {
-        background: radial-gradient(circle, #B1B1B1 0%, var(--text-color) 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
     .photo-frame {
         display: flex;
         gap: 1.25rem;
-    }
-
-    .layout-container {
-        width: 100%;
-        position: relative;
-
-        .layout-container-img1 {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .layout-container-img2 {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
     }
 
     .container2 {
@@ -203,7 +212,26 @@ section {
     .container3 {
         margin-top: 1.438rem;
         padding-top: 4.375rem;
+        padding-bottom: 4.375rem;
+        background: linear-gradient(0deg, var(--secend-background-color) 0%, var(--background-color) 100%);
     }
+}
+
+.section3 {
+
+    .container1 {
+        margin-top: 1.438rem;
+        padding-top: 3.125rem;
+
+        .steps-list {
+            margin-top: 3.125rem;
+
+            .step {
+                justify-content: left;
+            }
+        }
+    }
+
 }
 
 
