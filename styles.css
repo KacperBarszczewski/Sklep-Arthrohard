@@ -320,7 +320,7 @@ section {
 
         .custom-arrow {
             position: absolute;
-            right: 12px;
+            right: 5.813rem;
             top: 50%;
             transform: translateY(-50%);
             pointer-events: none;
