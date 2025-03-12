@@ -4,20 +4,17 @@ const closeBtn = document.querySelector('.close-btn');
 
 hamburger.addEventListener('click', () => {
     if (mobileMenu.classList.contains('active')) {
-        mobileMenu.style.display = 'none';
         mobileMenu.classList.remove('active');
-        hamburger.style.position = 'absolute';
+        hamburger.classList.remove('active');
     } else {
         mobileMenu.classList.add('active');
-        mobileMenu.style.display = 'flex';
-        hamburger.style.position = 'fixed';
+        hamburger.classList.add('active');
     }
 });
 
-
-// Zamknięcie po kliknięciu w link
-// document.querySelectorAll('.mobile-menu a').forEach(link => {
-//     link.addEventListener('click', () => {
-//         mobileMenu.classList.remove('active');
-//     });
-// });
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+    });
+});
