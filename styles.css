@@ -449,9 +449,21 @@ section {
     display: none;
 }
 
+.desktop-layout-container-img1{
+    display: none;
+}
+
+.desktop-layout-container-img2{
+    display: none;
+}
+
 
 
 @media (min-width: 768px) {
+
+    .position-relative-container {
+        position: relative;
+    }
 
     h2,
     h3,
@@ -628,10 +640,32 @@ section {
                 width: 22.5rem;
                 height: 18.125rem;
                 border-radius: 0.5rem;
+                position: relative;
+                z-index: 10;
             }
 
             .bottom-border {
                 width: 22.5rem;
+            }
+
+            .desktop-layout-container-img1{
+                display: block;
+                width: 4.77rem;
+                height: 12.125rem;
+                position: absolute;
+                bottom: 0;
+                left: -4rem;
+                z-index: 0;
+            }
+
+            .desktop-layout-container-img2{
+                display: block;
+                width: 4rem;
+                height: 10rem;
+                position: absolute;
+                top: 10%;
+                right: -3rem;
+                z-index: 0;
             }
         }
 
@@ -643,15 +677,55 @@ section {
             .photo-frame {
                 width: 22.5rem;
                 height: 18.125rem;
-
-                gap: 20px;
                 justify-content: center;
-
+                                
                 img {
                     width: 10.625rem;
                     height: 18.375rem;
                     border-radius: 0.5rem;
+                    z-index: 10;
                 }
+            }
+
+            .step {
+
+                margin-bottom: 20px;
+
+                .step-number {
+                    width: 2.875rem;
+                    height: 2.875rem;
+                }
+
+                .step-text {
+                    font-size: 1.25rem;
+                }
+            }
+
+            .layout-container-img1{
+                display: none;
+            }
+            .layout-container-img2{
+                display: none;
+            }
+
+            .desktop-layout-container-img1{
+                display: block;
+                width: 4.79rem;
+                height: 12.125rem;
+                position: absolute;
+                bottom: 0;
+                left: -4rem;
+                z-index: 0;
+            }
+
+            .desktop-layout-container-img2{
+                display: block;
+                width: 4rem;
+                height: 10rem;
+                position: absolute;
+                bottom: 5%;
+                right: -1rem;
+                z-index: 0;
             }
         }
 
@@ -665,12 +739,38 @@ section {
                 width: 22.5rem;
                 height: 18.125rem;
                 border-radius: 0.5rem;
+                position: relative;
+                z-index: 10;
+            }
+
+            .layout-container-img1{
+                display: none;
+            }
+            .layout-container-img2{
+                display: none;
+            }
+
+            .desktop-layout-container-img1{
+                display: block;
+                width: 4.79rem;
+                height: 12.125rem;
+                position: absolute;
+                top: 10%;
+                left: -4rem;
+                z-index: 0;
+            }
+
+            .desktop-layout-container-img2{
+                display: block;
+                width: 4rem;
+                height: 10rem;
+                position: absolute;
+                bottom: 5%;
+                right: -1.5rem;
+                z-index: 0;
             }
         }
 
-        .step {
-            margin-bottom: 25px;
-        }
     }
 
 }
