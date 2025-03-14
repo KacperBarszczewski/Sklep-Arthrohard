@@ -449,12 +449,18 @@ section {
     display: none;
 }
 
-.desktop-layout-container-img1{
+.desktop-layout-container-img1 {
     display: none;
 }
 
-.desktop-layout-container-img2{
+.desktop-layout-container-img2 {
     display: none;
+}
+
+.photo {
+    button {
+        display: none;
+    }
 }
 
 
@@ -648,7 +654,7 @@ section {
                 width: 22.5rem;
             }
 
-            .desktop-layout-container-img1{
+            .desktop-layout-container-img1 {
                 display: block;
                 width: 4.77rem;
                 height: 12.125rem;
@@ -658,7 +664,7 @@ section {
                 z-index: 0;
             }
 
-            .desktop-layout-container-img2{
+            .desktop-layout-container-img2 {
                 display: block;
                 width: 4rem;
                 height: 10rem;
@@ -678,7 +684,7 @@ section {
                 width: 22.5rem;
                 height: 18.125rem;
                 justify-content: center;
-                                
+
                 img {
                     width: 10.625rem;
                     height: 18.375rem;
@@ -701,14 +707,15 @@ section {
                 }
             }
 
-            .layout-container-img1{
-                display: none;
-            }
-            .layout-container-img2{
+            .layout-container-img1 {
                 display: none;
             }
 
-            .desktop-layout-container-img1{
+            .layout-container-img2 {
+                display: none;
+            }
+
+            .desktop-layout-container-img1 {
                 display: block;
                 width: 4.79rem;
                 height: 12.125rem;
@@ -718,7 +725,7 @@ section {
                 z-index: 0;
             }
 
-            .desktop-layout-container-img2{
+            .desktop-layout-container-img2 {
                 display: block;
                 width: 4rem;
                 height: 10rem;
@@ -743,14 +750,15 @@ section {
                 z-index: 10;
             }
 
-            .layout-container-img1{
-                display: none;
-            }
-            .layout-container-img2{
+            .layout-container-img1 {
                 display: none;
             }
 
-            .desktop-layout-container-img1{
+            .layout-container-img2 {
+                display: none;
+            }
+
+            .desktop-layout-container-img1 {
                 display: block;
                 width: 4.79rem;
                 height: 12.125rem;
@@ -760,7 +768,7 @@ section {
                 z-index: 0;
             }
 
-            .desktop-layout-container-img2{
+            .desktop-layout-container-img2 {
                 display: block;
                 width: 4rem;
                 height: 10rem;
@@ -772,6 +780,162 @@ section {
         }
 
     }
+
+    .section3 {
+        display: none;
+    }
+
+    .section4 {
+        padding: 0 11.688rem;
+
+        .container-h-line {
+            h3 {
+                font-size: 1.938rem;
+            }
+        }
+
+        .margin-top-bottom-70 {
+            div {
+                display: none;
+            }
+        }
+
+        .container-gap70 {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            align-items: start;
+            row-gap: 1.25rem;
+
+            h4 {
+                font-size: 1.938rem;
+            }
+
+            #glukozaminy {
+                grid-area: 1 / 1 / 2 / 2;
+
+                .bottom-border {
+                    border-bottom: 1px solid;
+                    width: 16.7rem;
+                }
+            }
+
+            #chondroityny {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+
+            #kwas {
+                grid-area: 3 / 1 / 4 / 2;
+            }
+
+            .photo {
+                grid-area: 1 / 2 / 4 / 3;
+
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+
+
+                button {
+                    display: block;
+                    background-color: var(--accent-color);
+                    padding: 10px 40px;
+                    color: var(--text-color-white);
+                    font-weight: 700;
+                    border: 0;
+                    font-size: 20px;
+                    font-family: Futura PT;
+                    width: fit-content;
+
+                }
+
+                .photo-product {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+
+            #pazur {
+                grid-area: 1 / 3 / 2 / 4;
+            }
+
+            #witamina {
+                grid-area: 2 / 3 / 3 / 4;
+            }
+
+            #MSM {
+                grid-area: 3 / 3 / 4 / 4;
+            }
+
+            #syrop {
+                display: none;
+            }
+
+            .icon-container {
+                height: 4.375rem;
+                width: 4.375rem;
+                background-color: var(--custom-gray);
+                border-radius: 50%;
+            }
+
+            .icon {
+                display: none;
+            }
+        }
+
+        .layout-container-img1 {
+            display: none;
+        }
+
+        .layout-container-img2 {
+            display: none;
+        }
+
+        #dog-photo {
+            margin-top: 8rem;
+            width: 32%;
+        }
+
+
+    }
+
+    .section-products {
+
+
+        .custom-select {
+            width: fit-content;
+            flex-direction: row;
+        }
+
+        .select-wrapper {
+            .custom-arrow {
+                right: 1.4rem;
+                top: 54%;
+            }
+        }
+
+        select {
+            padding: 0.625rem 2.5rem;
+            height: 100%;
+        }
+
+        .products-list {
+            margin-top: 10rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+
+            .product {
+                height: 21.875rem;
+                width: 23.188rem;
+                font-size: 1.938rem;
+            }
+        }
+    }
+
+
 
 }
 
