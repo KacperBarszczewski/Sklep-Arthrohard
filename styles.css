@@ -468,7 +468,7 @@ section {
 
 @media (min-width: 920px) {
 
-    html{
+    html {
         font-size: 10px;
     }
 
@@ -932,7 +932,7 @@ section {
         .products-list {
             margin-top: 10rem;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-template-rows: auto;
 
             .product {
@@ -950,17 +950,25 @@ section {
         grid-template-columns: repeat(3, minmax(0, 1fr));
 
     }
+
+    .section-products {
+        .products-list {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+
 }
 
 @media (min-width: 1400px) {
-    html{
+    html {
         font-size: 13px;
     }
 
 }
 
 @media (min-width: 1800px) {
-    html{
+    html {
         font-size: 16px;
     }
 
