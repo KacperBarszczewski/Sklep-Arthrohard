@@ -57,7 +57,7 @@ async function loadProducts() {
             productDiv.addEventListener("click", () => {
                 popup.innerHTML = `<div class='popup-content'>
                         <div style="text-align: end;">
-                        <span style="color:red">X</span>
+                        <span style="color:red;cursor: pointer;">X</span>
                         </div>
                         <h2>Produkt ID: ${product.id}</h2>
                         <img src="${product.image}" alt="Produkt ${product.id}" style="width: 100%; height: auto;"/>
