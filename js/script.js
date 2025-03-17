@@ -18,3 +18,76 @@ document.querySelectorAll('.mobile-menu a').forEach(link => {
         hamburger.classList.remove('active');
     });
 });
+
+//Products
+const apiUrl = "https://brandstestowy.smallhost.pl/api/random";
+const productsContainer = document.querySelector(".products-list");
+const selectElement = document.getElementById("product-count");
+
+let pageNumber = 1;
+let pageSize = parseInt(selectElement.value);
+let isLoading = false;
+
+const popup = document.createElement("div");
+popup.classList.add("popup");
+popup.style.display = "none";
+document.body.appendChild(popup);
+
+popup.addEventListener("click", () => {
+    popup.style.display = "none";
+});
+
+async function loadProducts() {
+    if (isLoading) return;
+    isLoading = true;
+
+    try {
+        const response = await fetch(`${apiUrl}?pageNumber=${pageNumber}&pageSize=${pageSize}`);
+        const data = await response.json();
+        const products = data.data || [];
+
+        products.forEach(product => {
+            const productDiv = document.createElement("div");
+            productDiv.classList.add("product");
+            productDiv.innerHTML = `
+                    <img src="${product.image}" alt="Produkt ${product.id}" class="product-image"/>
+                    <p>${product.text}</p>
+                `;
+
+            productDiv.addEventListener("click", () => {
+                popup.innerHTML = `<div class='popup-content'>
+                        <div style="text-align: end;">
+                        <span style="color:red">X</span>
+                        </div>
+                        <h2>Produkt ID: ${product.id}</h2>
+                        <img src="${product.image}" alt="Produkt ${product.id}" style="width: 100%; height: auto;"/>
+                        <p>${product.text}</p>
+                    </div>`;
+                popup.style.display = "flex";
+            });
+
+            productsContainer.appendChild(productDiv);
+        });
+        pageNumber++;
+    } catch (error) {
+        console.error("Błąd podczas pobierania produktów:", error);
+    } finally {
+        isLoading = false;
+    }
+}
+
+window.addEventListener("scroll", () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100 && !isLoading) {
+        loadProducts();
+    }
+});
+
+selectElement.addEventListener("change", () => {
+    pageSize = parseInt(selectElement.value);
+    pageNumber = 1;
+    productsContainer.innerHTML = "";
+    loadProducts();
+});
+
+loadProducts();
+

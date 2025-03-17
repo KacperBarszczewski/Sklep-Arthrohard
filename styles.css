@@ -382,10 +382,20 @@ section {
             height: 6.563rem;
             width: 6.563rem;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             font-weight: 450;
             font-size: 1.938rem;
+
+            p{
+                margin: 0;
+            }
+
+            img{
+                height: 4rem;
+                width: auto;
+            }
         }
     }
 }
@@ -464,6 +474,27 @@ section {
     }
 }
 
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    max-width: 31.25rem;
+    width: 90%;
+    text-align: center;
+}
 
 
 @media (min-width: 920px) {
@@ -939,6 +970,14 @@ section {
                 height: 21.875rem;
                 width: 23.188rem;
                 font-size: 1.938rem;
+
+                p{
+                    font-size: large;
+                }
+
+                img{
+                    height: 18rem;
+                }
             }
         }
     }
