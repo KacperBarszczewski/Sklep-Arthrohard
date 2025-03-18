@@ -1,5 +1,8 @@
 # Sklep Arthrohard
 
+## Link do strony:
+https://kacperbarszczewski.github.io/Sklep-Arthrohard/
+
 ### Funkcjonalności:
 1. **Pobieranie produktów z API**
 2. **Popup z dodatkowymi danymi**
@@ -8,5 +11,6 @@
 5. **Infinite Scroll**
 
 ## Projekt graficzny
-Projekt graficzny strony dostępny jest na platformie Figma. Można go znaleźć pod tym linkiem:
-[Projekt graficzny w Figma](https://www.figma.com/file/ZR8RRI5bqfYu6H4uRr0BPI/Arthrohard-TEST?type=design&node-id=0-1&mode=design)
+Projekt graficzny w Figmia:
+https://www.figma.com/file/ZR8RRI5bqfYu6H4uRr0BPI/Arthrohard-TEST?type=design&node-id=0-1&mode=design
+
