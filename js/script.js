@@ -1,6 +1,7 @@
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
 const closeBtn = document.querySelector('.close-btn');
+const mobileMenuContent = document.querySelector('.mobile-menu-content');
 
 hamburger.addEventListener('click', () => {
     if (mobileMenu.classList.contains('active')) {
@@ -9,6 +10,13 @@ hamburger.addEventListener('click', () => {
     } else {
         mobileMenu.classList.add('active');
         hamburger.classList.add('active');
+    }
+});
+
+mobileMenu.addEventListener('click', (event) => {
+    if (!mobileMenuContent.contains(event.target)) {
+        mobileMenu.classList.remove('active');
+        hamburger.classList.remove('active');
     }
 });
 
