@@ -99,3 +99,11 @@ selectElement.addEventListener("change", () => {
 
 loadProducts();
 
+//Parallax
+window.addEventListener("scroll", () => {
+    document.querySelectorAll(".parallax-element").forEach(element => {
+        let speed = 0.02;
+        let yOffset = window.scrollY * speed;
+        element.style.transform = `translateY(${yOffset}px)`;
+    });
+});

@@ -65,6 +65,12 @@ section {
     text-align: center;
 }
 
+.parallax-element {
+    transform: translateY(0px);
+    transition: transform 1s ease-out;
+    z-index: -1;
+}
+
 .logo {
     font-size: 1rem;
     color: var(--logo-color);
