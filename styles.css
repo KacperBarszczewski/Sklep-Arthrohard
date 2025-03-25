@@ -266,7 +266,7 @@ section {
         display: none;
     }
 
-    h2 {
+    h3 {
         margin-top: 2rem;
         background: linear-gradient(90deg, var(--text-color) 50%, var(--background-color));
         background-clip: text;
